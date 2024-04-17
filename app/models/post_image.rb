@@ -1,6 +1,11 @@
 class PostImage < ApplicationRecord
   
   has_one_attached :image
+  
+  validates :shop_name, presence: true
+  validates :image, presence:true
+  
+  
   belongs_to :user
   has_many :post_comments, dependent: :destroy
   has_many :favorites, dependent: :destroy
