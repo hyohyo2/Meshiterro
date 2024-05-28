@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const { environment } = require('@rails/webpacker')
 
 module.exports = environment
@@ -10,5 +12,5 @@ environment.plugins.prepend(
     jQuery: 'jquery/src/jquery',
     Popper: 'popper.js'
   })
-  
+
   )
